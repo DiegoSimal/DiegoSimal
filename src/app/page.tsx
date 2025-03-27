@@ -12,6 +12,7 @@ import { useState } from "react";
 export default function Home() {
   const [bol, setBol] = useState<boolean>(false);
   // const handleOnClick = (): void => setBol(true);
+  const isProduction = process.env.NODE_ENV === "production";
 
   return (
     <html lang="en">
@@ -28,7 +29,7 @@ export default function Home() {
               </div>
 
               <div className="mt-7 border-solid border-blue-400 dark:border-purple-400 border-2 rounded-md w-31 h-31 absolute right-20">
-                <div className=""><Image src="/perfil.png" alt="foto de perfil" width={120} height={120} /><p></p></div>
+                <div className=""><Image src={isProduction ? "perfil.png" : "/perfil.png"} alt="foto de perfil" width={120} height={120} /><p></p></div>
               </div>
 
             </div>
