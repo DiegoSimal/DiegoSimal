@@ -36,7 +36,7 @@ export default function SidebarItem({
          ${ //cursor-pointer
             active && !subMenu
               ? 'text-primary-200 bg-gradient-to-tr from-black to-black'
-              : 'text-gray-500 hover:bg-blue-200 dark:hover:bg-indigo-50'
+              : 'text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800'
             }
          ${!colapsed && 'hidden sm:flex'}
      `}
@@ -67,7 +67,7 @@ export default function SidebarItem({
               // Estilos de bocadillo externo cuando el sidebar esta cerrado:
               className={`
               invisible text-primary-500 absolute left-full ml-6 -translate-x-3
-              rounded-md bg-indigo-100 px-2
+              rounded-md bg-gray-300 px-2
               py-1 text-sm opacity-20 transition-all
               group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 w-48
         `}

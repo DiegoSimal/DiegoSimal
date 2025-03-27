@@ -10,17 +10,19 @@ import { useState } from "react";
 
 
 export default function Home() {
-  const [bol, setBol] = useState<boolean>(false);
+  const [one, setOne] = useState<boolean>(false);
+  const [two, setTwo] = useState<boolean>(false);
+
   // const handleOnClick = (): void => setBol(true);
   const isProduction = process.env.NODE_ENV === "production";
 
   return (
     <html lang="en">
       <body className="m-0 p-0 font-sans">
-        <div className="flex justify-between object-none relative flex-col bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+        <div className="flex justify-between object-none relative flex-col bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-400">
           <div className="sticky top-0 left-0"><div className="absolute"><MakeSidebar /></div></div>
 
-          <header className="text-center text-white h-100 flex items-center justify-center flex-col bg-image">
+          <header className="text-center text-gray-50 h-100 flex items-center justify-center flex-col bg-image">
             <div className="mb-45">
 
               <div className="mt-65">
@@ -35,26 +37,21 @@ export default function Home() {
             </div>
           </header>
 
-          <section className="text-right right-40 p-10 bg-gray-100 border-blue-400 border-b-gray-300 dark:bg-gray-900 border dark:border-t-purple-400 dark:border-b-gray-500">
+          <section className="text-right right-40 p-10 bg-gray-200 border-blue-400 border-b-gray-300 dark:bg-gray-900 border dark:border-t-purple-400 dark:border-b-gray-500">
             <h1 className="text-xl mr-10 text-blue-400 dark:text-purple-400 mt-3 font-bold">Landing Page</h1>
-            <p className="text-base mr-10 text-gray-500 dark:text-white">A page about my knowledge</p>
+            <p className="text-base mr-10 text-gray-500 dark:text-gray-50">A page about my knowledge</p>
           </section>
 
           <div className="w-250 self-center">
-            <section className="p-10 ">
-              <button onClick={() => setBol(!bol)}><HeadSize text="Professional Profile" /></button>
-              {bol &&
-                <div>
-                  <ParagraphSize text="Developer with knowledge in multiplatform, web and database development.
+            <section className="p-10">
+              <HeadSize text="Professional Profile" />
+              <ParagraphSize text="Developer with knowledge in multiplatform, web and database development.
               Experienced in XML, HTML, CSS, JavaScript, TypeScript, React, C# and SQL." />
-                  <ParagraphSize text="Interested in code creation and optimization.
+              <ParagraphSize text="Interested in code creation and optimization.
               I am looking to use my skills to provide prudent and safe solutions." />
-                </div>
-                
-              }
             </section>
 
-            <section className="p-10 ">
+            <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
               <HeadSize text="Work Experience" />
               <List text="Internship in Web Development at TRIA INGENIERIA. " />
               <ParagraphSize tab={true} text="I have developed web applications with TypeScript in React, taking advantage 
@@ -68,7 +65,7 @@ export default function Home() {
               optimizing functionality and user experience." />
             </section>
 
-            <section className="p-10 ">
+            <section className="p-10">
               <HeadSize text="Studies and study centers" />
               <List text="Multiplatform Applications Development Course “DAM”- I.E.S Carmen Martin Gaite - 09/2024 to 06/2026" />
               <ParagraphSize tab={true} text="I am learning to develop applications for different platforms, using programming 
@@ -80,7 +77,7 @@ export default function Home() {
               systems, local network management, and computer security, as well as in technical troubleshooting and user support." />
             </section>
 
-            <section className="p-10 ">
+            <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
               <HeadSize text="Technical Knowledge" />
               <ParagraphSize text="Knowledge in multiplatform and web development." />
               <ParagraphSize text="Knowledge in Computer Equipment Management." />
@@ -92,29 +89,39 @@ export default function Home() {
               <List text="BBDD: MySQL" />
             </section>
 
-            <section className="p-10 ">
-              <HeadSize text="Technical skills" />
-              <List text="Experience in advanced SQL queries" />
-              <List text="Ease of understanding external code" />
-              <List text="Clean and readable code" />
-              <List text="Schematic code and small size" />
-            </section>
+            <div className="pt-3 bg-gray-200 dark:bg-gray-800">
+              <HeadSize text="Drop Downs" />
+              <section className="p-10 ">
+                <button onClick={() => setOne(!one)}><HeadSize text="Technical skills" /></button>
+                {one &&
+                  <div>
+                    <List text="Experience in advanced SQL queries" />
+                    <List text="Ease of understanding external code" />
+                    <List text="Clean and readable code" />
+                    <List text="Schematic code and small size" />
+                  </div>
+                }
+              </section>
 
-            <section className="p-10 ">
-              <HeadSize text="Soft skills" />
-              <List text="High adaptive capacity" />
-              <List text="Comfort in Group or Team Work" />
-              <List text="Leadership and decision making skills" />
-              <List text="High creative and management skills" />
-            </section>
+              <section className="p-10 ">
+                <button onClick={() => setTwo(!two)}><HeadSize text="Soft skills" /></button>
+                {two &&
+                  <div>
+                    <List text="High adaptive capacity" />
+                    <List text="Comfort in Group or Team Work" />
+                    <List text="Leadership and decision making skills" />
+                    <List text="High creative and management skills" />
+                  </div>
+                }
 
+              </section>
+            </div>
 
-            <section className="p-10 ">
+            <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
               <HeadSize text="Future plans" />
-              <List text="Experience in advanced SQL queries" />
-              <List text="Ease of understanding external code" />
-              <List text="Clean and readable code" />
-              <List text="Schematic code and small size" />
+              <ParagraphSize text="My goal is to keep growing as a programmer, gain experience in 
+              new technologies and contribute to important projects. I would like to work in a team 
+              and learn technologies that improve my way of programming and help companies." />
             </section>
           </div>
         </div>

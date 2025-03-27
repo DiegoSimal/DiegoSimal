@@ -21,7 +21,7 @@ export default function Sidebar({ children, colapsed, setColapsed }: {children: 
       // Aqui para editar el tamaño:
         className={`box-border h-300 transition-all ${colapsed ? 'w-0 sm:w-15 ' : 'w-5/6 sm:w-64'}`} //Cambiado de orden
       >
-        <nav className="flex h-full flex-col border-r bg-gray-100 text-gray-300 dark:bg-gray-900 dark:text-gray-500 shadow-sm">
+        <nav className="flex h-full flex-col border-r bg-gray-200 text-gray-400 dark:bg-gray-900 dark:text-gray-500 shadow-sm">
           <div className="flex items-center justify-between p-4 pb-2">
             <Image
               src={isProduction ? "image/perfil.png" : "/image/perfil.png"}
@@ -35,7 +35,7 @@ export default function Sidebar({ children, colapsed, setColapsed }: {children: 
             <div className={`${colapsed ? 'hidden sm:block' : ''}`}>
               <button
                 onClick={() => setColapsed((curr: boolean) => !curr)}
-                className="rounded-l bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 p-1.5 dark:hover:bg-gray-800"
+                className="rounded-l bg-gray-200 hover:bg-gray-100 dark:bg-gray-900 p-1.5 dark:hover:bg-gray-800"
               >
                 {colapsed ? (
                   <FaArrowLeft className="h-7 w-6" />

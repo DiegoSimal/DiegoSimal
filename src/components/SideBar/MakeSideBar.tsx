@@ -31,15 +31,7 @@ export default function MakeSidebar() {
           'Spanish: Native',
           'English: High level'
         ]
-      },
-      // {
-      //   texts: ['Spanish: Native']
-      // },
-      // {
-      //   texts:['English: High level']
-      // },
-  
-  
+      },  
     ] : [
       {
         icon: <IoMdMail />,
@@ -52,15 +44,7 @@ export default function MakeSidebar() {
         texts: [
           '+34 683 60 64 03'
         ]
-      },
-      {
-        icon: <IoLanguage />,
-        texts: [
-          "Spanish: Native",
-          "English: High"
-        ]
-      },
-  
+      },  
     ];
     // Desktop Sidebar
     return (
