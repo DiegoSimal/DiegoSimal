@@ -24,7 +24,7 @@ export default function Sidebar({ children, colapsed, setColapsed }: {children: 
         <nav className="flex h-full flex-col border-r bg-gray-100 text-gray-300 dark:bg-gray-900 dark:text-gray-500 shadow-sm">
           <div className="flex items-center justify-between p-4 pb-2">
             <Image
-              src={isProduction ? "perfil.png" : "/perfil.png"}
+              src={isProduction ? "image/perfil.png" : "/image/perfil.png"}
               className={`overflow-hidden transition-all ${
                 colapsed ? 'w-0' : 'w-12'
               }`}
