@@ -6,7 +6,7 @@ import ParagraphSize from "@/components/ParagraphSize/ParagraphSize";
 import MakeSidebar from "@/components/SideBar/MakeSideBar";
 import Image from "next/image";
 import { useState } from "react";
-
+import { FaArrowRight, FaArrowDown } from "react-icons/fa";
 
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
             <div className="mb-45">
 
               <div className="mt-65">
-                <h1 className="text-4xl font-bold uppercase">DIEDO SIMAL</h1>
+                <h1 className="text-4xl font-bold uppercase">DIEGO SIMAL</h1>
                 <p className="text-18 mt-5">Application developer</p>
               </div>
 
@@ -53,16 +53,20 @@ export default function Home() {
 
             <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
               <HeadSize text="Work Experience" />
-              <List text="Internship in Web Development at TRIA INGENIERIA. " />
+              <List text="Internship in Web Development at TRIA INGENIERIA." />
               <ParagraphSize tab={true} text="I have developed web applications with TypeScript in React, taking advantage 
               of the advanced features of the framework. I have created databases in Neon, designing schemas to 
-              optimize the communication between the frontend and the database. In addition, I have used Tailwind 
+              optimize the communication between the frontend and the database. In addition, I used Tailwind 
               CSS to apply web styles in an efficient and responsive way." />
+              <ParagraphSize tab={true} text="Period from March to April 2025." />
               <br />
+              
               <List text='Internship in Web Development at PALMO.' />
               <ParagraphSize tab={true} text="I learned to create and manage websites using PrestaShop, a content management 
               platform. I have gained experience in the configuration, customization and administration of online stores, 
               optimizing functionality and user experience." />
+              <ParagraphSize tab={true} text="Period from April to June 2024." />
+
             </section>
 
             <section className="p-10">
@@ -79,20 +83,20 @@ export default function Home() {
 
             <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
               <HeadSize text="Technical Knowledge" />
-              <ParagraphSize text="Knowledge in multiplatform and web development." />
-              <ParagraphSize text="Knowledge in Computer Equipment Management." />
-              <ParagraphSize text="Knowledge of Web Content Management Systems, such as WordPress or PrestaShop." />
+              <ParagraphSize text="Knowledge in multiplatform and web development, with knowledge in React and web 
+              content management systems such as WordPress or PrestaShop. With experience in internships and quality projects." />
+              <ParagraphSize text="Knowledge in computer equipment management and network management." />
               <br />
-              <ParagraphSize text="Development languages:" />
-              <List text="Front: HTML, CSS, JavaScript y TypeScript." />
+              <ParagraphSize text="Development languages in my repertoire:" />
+              <List text="Front: HTML, CSS, JavaScript and TypeScript with React." />
               <List text="Back: XML and Schema, DTD, C#" />
               <List text="BBDD: MySQL" />
             </section>
 
-            <div className="pt-3 bg-gray-200 dark:bg-gray-800">
+            <div className="pt-3 ">
               <HeadSize text="Drop Downs" />
               <section className="p-10 ">
-                <button onClick={() => setOne(!one)}><HeadSize text="Technical skills" /></button>
+                <button className="flex flex-col" onClick={() => setOne(!one)}><HeadSize text="Technical skills" />{one ? <FaArrowDown /> : <FaArrowRight />}</button>
                 {one &&
                   <div>
                     <List text="Experience in advanced SQL queries" />
@@ -104,7 +108,7 @@ export default function Home() {
               </section>
 
               <section className="p-10 ">
-                <button onClick={() => setTwo(!two)}><HeadSize text="Soft skills" /></button>
+                <button className="flex flex-col" onClick={() => setTwo(!two)}><HeadSize text="Soft skills" />{two ? <FaArrowDown /> : <FaArrowRight />}</button>
                 {two &&
                   <div>
                     <List text="High adaptive capacity" />
@@ -117,7 +121,7 @@ export default function Home() {
               </section>
             </div>
 
-            <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparent">
+            <section className="p-10">
               <HeadSize text="Future plans" />
               <ParagraphSize text="My goal is to keep growing as a programmer, gain experience in 
               new technologies and contribute to important projects. I would like to work in a team 
