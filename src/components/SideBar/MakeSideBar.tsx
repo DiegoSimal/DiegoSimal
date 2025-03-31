@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import SidebarItem from './SideBarItem';
-import {FaPhoneSquareAlt } from "react-icons/fa";
-//  FaUser, 
+import {FaPhoneSquareAlt, FaUser } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 // import { GiSkills } from "react-icons/gi";
 import { IoLanguage } from "react-icons/io5";
@@ -32,6 +31,14 @@ export default function MakeSidebar() {
           'English: High level'
         ]
       },  
+      {},
+      {
+        icon: <FaUser />,
+        texts: [
+          'About me:',
+          'I like to learn something new every day, I am passionate about technology and its novelties. I am a great lover of challenges and here are always challenges to meet.'
+         ]
+      },
     ] : [
       {
         icon: <IoMdMail />,

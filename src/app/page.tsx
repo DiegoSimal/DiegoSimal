@@ -60,7 +60,7 @@ export default function Home() {
               CSS to apply web styles in an efficient and responsive way." />
               <ParagraphSize tab={true} text="Period from March to April 2025." />
               <br />
-              
+
               <List text='Internship in Web Development at PALMO.' />
               <ParagraphSize tab={true} text="I learned to create and manage websites using PrestaShop, a content management 
               platform. I have gained experience in the configuration, customization and administration of online stores, 
@@ -88,13 +88,19 @@ export default function Home() {
               <ParagraphSize text="Knowledge in computer equipment management and network management." />
               <br />
               <ParagraphSize text="Development languages in my repertoire:" />
-              <List text="Front: HTML, CSS, JavaScript and TypeScript with React." />
-              <List text="Back: XML and Schema, DTD, C#" />
-              <List text="BBDD: MySQL" />
+              <List text="Front: HTML, CSS, JavaScript and TypeScript." />
+              <List text="Back: XML and Schema, DTD, C#." />
+              <List text="Frameworks: React." />
+              <List text="BBDD: MySQL." />
+              <List text="Development tools: GitHub." />
+              <List text="Cloud database platforms: Neon db." />
+              
+
             </section>
 
-            <div className="pt-3 ">
+            <div className="pt-3 pl-10">
               <HeadSize text="Drop Downs" />
+
               <section className="p-10 ">
                 <button className="flex flex-col" onClick={() => setOne(!one)}><HeadSize text="Technical skills" />{one ? <FaArrowDown /> : <FaArrowRight />}</button>
                 {one &&
@@ -126,6 +132,21 @@ export default function Home() {
               <ParagraphSize text="My goal is to keep growing as a programmer, gain experience in 
               new technologies and contribute to important projects. I would like to work in a team 
               and learn technologies that improve my way of programming and help companies." />
+            </section>
+
+            <section className="p-10">
+              <HeadSize text="Links to networks" />
+              <div className="flex">
+                <p className="text-purple-500 ml-10">My repository on GitHub:</p>
+                <a className="ml-2" href="https://github.com/DiegoSimal">github/DiegoSimal .</a>
+              </div>
+              <ParagraphSize text="Here I will be uploading all the projects I'm doing."/>
+              <br/>
+              <div className="flex">
+                <p className="text-blue-500 ml-10">My Linkedin profile:</p>
+                <a className="ml-2" href="https://www.linkedin.com/in/diego-simal-megias-433554358/">Linkedin/diego-simal-megias .</a>
+              </div>
+              <ParagraphSize text="Here I will show my professional profile in a more general way."/>
             </section>
           </div>
         </div>
