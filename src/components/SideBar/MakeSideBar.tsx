@@ -35,7 +35,8 @@ export default function MakeSidebar() {
       {
         icon: <FaUser />,
         texts: [
-          'Things about me:',
+          'Things',
+          'About me:'
          ]
       },
       {

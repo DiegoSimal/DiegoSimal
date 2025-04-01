@@ -1,11 +1,10 @@
 "use client"
 
-import Header from "@/components/Header/Header";
+import Banner from "@/components/Banner/Banner";
 import HeadSize from "@/components/HeadSize/HeadSize";
 import List from "@/components/List/List";
 import ParagraphSize from "@/components/ParagraphSize/ParagraphSize";
 import MakeSidebar from "@/components/SideBar/MakeSideBar";
-import Image from "next/image";
 import { useState } from "react";
 import { FaArrowRight, FaArrowDown } from "react-icons/fa";
 
@@ -15,7 +14,7 @@ export default function Home() {
   const [two, setTwo] = useState<boolean>(false);
 
   // const handleOnClick = (): void => setBol(true);
-  const isProduction = process.env.NODE_ENV === "production";
+  // const isProduction = process.env.NODE_ENV === "production";
 
   return (
     <html lang="en">
@@ -23,15 +22,8 @@ export default function Home() {
         <div className="flex justify-between object-none relative flex-col bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-400">
           <div className="sticky top-0 left-0"><div className="absolute"><MakeSidebar /></div></div>
 
-          <header className={`text-center text-gray-50 h-100 flex items-center justify-center flex-col bg-[url(${isProduction ? "image/fondo-dark.jpg" : "/image/fondo-dark.jpg"})] bg-center bg-repeat`}>
-            <div className="mb-45">
-              <Header title="DIEGO SIMAL" subTitle="Application developer"/>
-              <div className="mt-7 border-solid border-blue-400 dark:border-purple-400 border-2 rounded-md w-31 h-31 absolute right-20">
-                <div className=""><Image src={isProduction ? "image/perfil.png" : "/image/perfil.png"} alt="foto de perfil" width={120} height={120} /><p></p></div>
-              </div>
-
-            </div>
-          </header>
+          {/* Here the program will create the page banner */}
+          <Banner /> 
 
           <section className="text-right right-40 p-10 bg-gray-200 border-blue-400 border-b-gray-300 dark:bg-gray-900 border dark:border-t-purple-400 dark:border-b-gray-500">
             <h1 className="text-xl mr-10 text-blue-400 dark:text-purple-400 mt-3 font-bold">Landing Page</h1>
@@ -83,12 +75,13 @@ export default function Home() {
               content management systems such as WordPress or PrestaShop. With experience in internships and quality projects." />
               <ParagraphSize text="Knowledge in computer equipment management and network management." />
               <br />
-              <ParagraphSize text="Development languages in my repertoire:" />
+              <ParagraphSize text="Development languages and tools in my repertoire:" />
               <List text="Front: HTML, CSS, JavaScript and TypeScript." />
               <List text="Back: DTD, C#, XML and Schema." />
-              <List text="Frameworks: React." />
+              <List text="Frameworks: React, Tailwind." />
               <List text="BBDD: MySQL." />
               <List text="Development tools: GitHub." />
+              <List text="IDEs: Visual Studio, Visual Studio Code, Brackets." />
               <List text="Cloud database platforms: Neon db." />
               
 
@@ -123,7 +116,7 @@ export default function Home() {
               </section>
             </div>
 
-            <section className="p-10">
+            <section className="p-10 dark:bg-radial from-gray-800 via-transparent to-transparen">
               <HeadSize text="Future plans" />
               <ParagraphSize text="My goal is to keep growing as a programmer, gain experience in 
               new technologies and contribute to important projects. I would like to work in a team 

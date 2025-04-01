@@ -38,9 +38,9 @@ export default function Sidebar({ children, colapsed, setColapsed }: {children: 
                 className="rounded-l bg-gray-200 hover:bg-gray-100 dark:bg-gray-900 p-1.5 dark:hover:bg-gray-800"
               >
                 {colapsed ? (
-                  <FaArrowLeft className="h-7 w-6" />
-                ) : (
                   <FaArrowRight className="h-7 w-6" />
+                ) : (
+                  <FaArrowLeft className="h-7 w-6" />
                 )}
               </button>
             </div>
