@@ -1,5 +1,6 @@
 "use client"
 
+import Header from "@/components/Header/Header";
 import HeadSize from "@/components/HeadSize/HeadSize";
 import List from "@/components/List/List";
 import ParagraphSize from "@/components/ParagraphSize/ParagraphSize";
@@ -22,14 +23,9 @@ export default function Home() {
         <div className="flex justify-between object-none relative flex-col bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-400">
           <div className="sticky top-0 left-0"><div className="absolute"><MakeSidebar /></div></div>
 
-          <header className="text-center text-gray-50 h-100 flex items-center justify-center flex-col bg-image">
+          <header className={`text-center text-gray-50 h-100 flex items-center justify-center flex-col bg-[url(${isProduction ? "image/fondo-dark.jpg" : "/image/fondo-dark.jpg"})] bg-center bg-repeat`}>
             <div className="mb-45">
-
-              <div className="mt-65">
-                <h1 className="text-4xl font-bold uppercase">DIEGO SIMAL</h1>
-                <p className="text-18 mt-5">Application developer</p>
-              </div>
-
+              <Header title="DIEGO SIMAL" subTitle="Application developer"/>
               <div className="mt-7 border-solid border-blue-400 dark:border-purple-400 border-2 rounded-md w-31 h-31 absolute right-20">
                 <div className=""><Image src={isProduction ? "image/perfil.png" : "/image/perfil.png"} alt="foto de perfil" width={120} height={120} /><p></p></div>
               </div>
@@ -89,7 +85,7 @@ export default function Home() {
               <br />
               <ParagraphSize text="Development languages in my repertoire:" />
               <List text="Front: HTML, CSS, JavaScript and TypeScript." />
-              <List text="Back: XML and Schema, DTD, C#." />
+              <List text="Back: DTD, C#, XML and Schema." />
               <List text="Frameworks: React." />
               <List text="BBDD: MySQL." />
               <List text="Development tools: GitHub." />

@@ -31,13 +31,27 @@ export default function MakeSidebar() {
           'English: High level'
         ]
       },  
-      {},
+
       {
         icon: <FaUser />,
         texts: [
-          'About me:',
-          'I like to learn something new every day, I am passionate about technology and its novelties. I am a great lover of challenges and here are always challenges to meet.'
+          'Things about me:',
          ]
+      },
+      {
+        texts: [
+           'I am passionate about technology and its novelties.'
+        ]
+      },
+      {
+        texts: [
+           'I am looking to learn something new every day'
+        ]
+      },
+      {
+        texts: [
+          'I love challenges, in development there is always a challenge to meet.'
+        ]
       },
     ] : [
       {
